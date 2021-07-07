@@ -240,22 +240,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e09b331d6b4f478513026344ee6c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propellant: {fileID: 0}
-  propellantRatio: 0
-  chamberPressure: 0
-  nozzleDiameter: 0
-  expansionRatio: 0
-  actualPropellantRatio: 0
-  combustionTemperature: 0
-  specificHeatRatio: 0
-  molecularWeight: 0
-  pressureRatio: 0
-  massFlowRate: 0
-  exhaustVelocity: 0
-  seaLevelThrust: 0
-  vacuumThrust: 0
-  seaLevelIsp: 0
-  vacuumIsp: 0
+  propellant: {fileID: 11400000, guid: 19015cfa04246ce4f8b53deea1c2a1f3, type: 2}
+  propellantRatio: 2.27
+  chamberPressure: 100000
+  nozzleDiameter: 3.7
+  expansionRatio: 16
+  actualPropellantRatio: 2.27
+  combustionTemperature: 3328.67
+  specificHeatRatio: 1.1357
+  molecularWeight: 21.729
+  pressureRatio: 0.008297437
+  massFlowRate: 37.854706
+  exhaustVelocity: 3048.5347
+  seaLevelThrust: -965133.9
+  vacuumThrust: 124322.875
+  seaLevelIsp: -2599.7495
+  vacuumIsp: 334.88446
 --- !u!4 &268690850
 Transform:
   m_ObjectHideFlags: 0
@@ -379,13 +379,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766404747}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.12154851, y: -0, z: -0, w: 0.99258554}
+  m_LocalPosition: {x: 0, y: -3.259, z: -9.613}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -13.963, y: 0, z: 0}
 --- !u!1 &1976037953
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +398,9 @@ GameObject:
   - component: {fileID: 1976037956}
   - component: {fileID: 1976037955}
   - component: {fileID: 1976037954}
+  - component: {fileID: 1976037958}
+  - component: {fileID: 1976037960}
+  - component: {fileID: 1976037959}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -435,7 +438,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b5bb5fcc50637774a99661d2aca76b5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -473,12 +476,61 @@ Transform:
   m_GameObject: {fileID: 1976037953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.413, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 1387346557}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1976037958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976037953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae167df3043d1604bb49fa1781dd0507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expansionRatio: 12.1
+  exitRadius: 1
+  nozzleLength: 60
+  positionOffset: {x: 0, y: 0}
+  throatVertexNumber: 8
+  bellVertexNumber: 15
+  nozzleThickness: 0.01
+--- !u!114 &1976037959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976037953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5778ea414a0460f9c447d86e5f8db0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  edgeNumber: 12
+  edges: []
+--- !u!114 &1976037960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976037953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbce51b01be2994baafaa42d33f7ad5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  verts: []
+  normals: []
+  triangles: 
+  uvs: []
 --- !u!1 &2101268282
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,8 +647,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5599433338218698550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08068967, y: -1.0815493, z: 0}
-  m_LocalScale: {x: 2.23, y: 2.23, z: 2.23}
+  m_LocalPosition: {x: 0.082860656, y: -1.1106492, z: 0}
+  m_LocalScale: {x: 2.29, y: 2.29, z: 2.29}
   m_Children: []
   m_Father: {fileID: 1387346557}
   m_RootOrder: 1
@@ -711,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b8c22a8d2cb7545b06e9639e89ff54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exitDiameter: 2.23
+  exitDiameter: 2.29
   pivotOffset: {x: 0, y: 0, z: 0}
 --- !u!33 &6336399487349115064
 MeshFilter:
